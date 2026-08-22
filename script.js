@@ -1,5 +1,5 @@
 const movies=[
-{name:"The Silent Horizon",year:2026,genre:"Thriller",rating:"8.4",type:"Movie",desc:"A fictional thriller demo title. Replace this with content you are legally authorized to publish.",watch:"https://www.youtube.com/"},
+{name:" Movie Name : Awarapan 2 (2026) Hindi Movie",year:2026,genre:"romantic ",rating:"8.4",type:"Movie",desc:"A fictional thriller demo title. Replace this with content you are legally authorized to publish.",watch:" https://www.filmyzilla57.com/verified/38399/server_1/"},
 {name:"City Lights Again",year:2025,genre:"Drama",rating:"8.1",type:"Movie",desc:"A fictional drama demo title for the template.",watch:"https://www.youtube.com/"},
 {name:"Rocket Kids",year:2026,genre:"Animation",rating:"8.7",type:"Movie",desc:"A fictional family animation demo title.",watch:"https://www.youtube.com/"},
 {name:"Laugh Track",year:2025,genre:"Comedy",rating:"7.9",type:"Movie",desc:"A fictional comedy demo title.",watch:"https://www.youtube.com/"},
