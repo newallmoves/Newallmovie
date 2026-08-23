@@ -1,26 +1,3 @@
-const movies=[
-{name:" Movie Name : Awarapan 2 (2026) Hindi Movie",year:2026,genre:"romantic ",rating:"8.4",type:"Movie",desc:"A fictional thriller demo title. Replace this with content you are legally authorized to publish.",watch:" https://www.filmyzilla57.com/verified/38399/server_1/"},
-{name:"City Lights Again",year:2025,genre:"Drama",rating:"8.1",type:"Movie",desc:"A fictional drama demo title for the template.",watch:"https://www.youtube.com/"},
-{name:"Rocket Kids",year:2026,genre:"Animation",rating:"8.7",type:"Movie",desc:"A fictional family animation demo title.",watch:"https://www.youtube.com/"},
-{name:"Laugh Track",year:2025,genre:"Comedy",rating:"7.9",type:"Movie",desc:"A fictional comedy demo title.",watch:"https://www.youtube.com/"},
-{name:"Final Mission",year:2026,genre:"Action",rating:"8.2",type:"Movie",desc:"A fictional action demo title.",watch:"https://www.youtube.com/"},
-{name:"Dark Evidence",year:2025,genre:"Thriller",rating:"8.0",type:"Movie",desc:"A fictional mystery/thriller demo title.",watch:"https://www.youtube.com/"}
-];
-const series=[
-{name:"Beyond Tomorrow",year:2026,genre:"Drama",rating:"8.5",type:"Series",desc:"A fictional web-series demo title.",watch:"https://www.youtube.com/"},
-{name:"Code Zero",year:2025,genre:"Action",rating:"8.3",type:"Series",desc:"A fictional series demo title.",watch:"https://www.youtube.com/"}
-];
-let current=[...movies];
-function card(x){return `<article class="card" onclick='openModal(${JSON.stringify(x)})'><div class="poster">${x.name}</div><div class="info"><div class="title">${x.name}</div><div class="meta">${x.year} • ${x.genre} • ⭐ ${x.rating}</div></div></article>`}
-function render(list,target){document.getElementById(target).innerHTML=list.map(card).join("")}
-function renderAll(){render(current,"movieGrid");render(series,"seriesGrid");document.getElementById("count").textContent=current.length+" titles"}
-function searchMovies(){const q=document.getElementById("searchInput").value.toLowerCase().trim();current=movies.filter(x=>[x.name,x.genre,x.year,x.type].join(" ").toLowerCase().includes(q));renderAll()}
-function filterCategory(cat){current=cat==="All"?[...movies]:movies.filter(x=>x.genre===cat);document.getElementById("searchInput").value="";renderAll();location.hash="movies"}
-function openModal(x){document.getElementById("modalContent").innerHTML=`<h2>${x.name}</h2><p class="meta">${x.year} • ${x.genre} • ⭐ ${x.rating}</p><p>${x.desc}</p><a class="watch" href="${x.watch}" target="_blank" rel="noopener">▶ Watch Official / Trailer</a>`;document.getElementById("modal").classList.add("show")}
-function closeModal(){document.getElementById("modal").classList.remove("show")}
-function toggleNav(){document.querySelector("nav").style.display=document.querySelector("nav").style.display==="flex"?"none":"flex"}
-window.onclick=e=>{if(e.target.id==="modal")closeModal()}
-renderAll();
 const mediaData = [
   {
     id: 1,
@@ -28,17 +5,19 @@ const mediaData = [
     shortTitle: "LENiN (2026)",
     year: "2026",
     releaseDate: "Aug-21st, 2026",
-    genre: ["Action", "Comedy", "Drama", "Dual Audio"],
-    poster: "https://images.unsplash.com/photo-1536440136628-849c177e76a1?w=500&auto=format&fit=crop&q=60",
+    genre: ["Action", "Comedy", "Drama", "Dual Audio", "Hindi Dubbed", "South Hindi Movies"],
+    poster: "1000234794.jpg", // aapki bheji hui photo ka file name
     quality: "4K UHD",
     downloads: [
-      { quality: "480p SD [x264]", size: "570 MB", link: "#" },
-      { quality: "720p HEVC 10Bit", size: "980 MB", link: "#" },
-      { quality: "720p x264 Dual Audio", size: "1.5 GB", link: "#" },
-      { quality: "1080p HEVC [DD5.1]", size: "2.1 GB", link: "#" },
-      { quality: "1080p 10Bit HEVC 60FPS", size: "2.7 GB", link: "#" },
-      { quality: "1080p x264 HQ", size: "3.1 GB", link: "#" },
-      { quality: "4K [2160p SDR] Ultra HD", size: "9.6 GB", link: "#" }
+      { quality: "480p ⚡ [570MB]", size: "570 MB", link: "https://pub-bb3047cda4324954adc1d55b39aaeccc.r2.dev/1b8a44196c3c40bdcae24f5cf1a26ae5" },
+      { quality: "720p HEVC [980MB]", size: "980 MB", link: "https://pub-bb3047cda4324954adc1d55b39aaeccc.r2.dev/1b8a44196c3c40bdcae24f5cf1a26ae5" },
+      { quality: "720p 10Bit HEVC [1.2GB]", size: "1.2 GB", link: "https://pub-bb3047cda4324954adc1d55b39aaeccc.r2.dev/1b8a44196c3c40bdcae24f5cf1a26ae5" },
+      { quality: "720p x264 [1.5GB]", size: "1.5 GB", link: "https://pub-bb3047cda4324954adc1d55b39aaeccc.r2.dev/1b8a44196c3c40bdcae24f5cf1a26ae5" },
+      { quality: "1080p HEVC [2.1GB]", size: "2.1 GB", link: "https://pub-bb3047cda4324954adc1d55b39aaeccc.r2.dev/1b8a44196c3c40bdcae24f5cf1a26ae5" },
+      { quality: "1080p 10Bit HEVC [2.7GB]", size: "2.7 GB", link: "https://pub-bb3047cda4324954adc1d55b39aaeccc.r2.dev/1b8a44196c3c40bdcae24f5cf1a26ae5" },
+      { quality: "1080p x264 [3.1GB]", size: "3.1 GB", link: "https://pub-bb3047cda4324954adc1d55b39aaeccc.r2.dev/1b8a44196c3c40bdcae24f5cf1a26ae5" },
+      { quality: "1080p [AMZN WEB-DL – 11.5GB]", size: "11.5 GB", link: "https://pub-bb3047cda4324954adc1d55b39aaeccc.r2.dev/1b8a44196c3c40bdcae24f5cf1a26ae5" },
+      { quality: "4K [2160p SDR ZEE5 WEB-DL – 9.6GB]", size: "9.6 GB", link: "https://pub-bb3047cda4324954adc1d55b39aaeccc.r2.dev/1b8a44196c3c40bdcae24f5cf1a26ae5" }
     ]
   },
   {
@@ -133,7 +112,7 @@ function renderSlider() {
   `).join("");
 }
 
-// Open Movie Detail View (Screenshot 2 & 3 Combined)
+// Open Movie Detail View
 function openMovieDetail(id) {
   const item = mediaData.find(m => m.id === id);
   if (!item) return;
@@ -144,8 +123,8 @@ function openMovieDetail(id) {
 
   const tagsHTML = item.genre.map(g => `<span class="tag"><i class="fa-solid fa-folder"></i> ${g}</span>`).join("");
   const dlHTML = item.downloads.map(dl => `
-    <a href="${dl.link}" class="download-item">
-      <span class="dl-quality"><i class="fa-solid fa-download"></i> ${dl.quality}</span>
+    <a href="${dl.link}" target="_blank" class="download-item">
+      <span class="dl-quality">${dl.quality}</span>
       <span class="dl-size">${dl.size}</span>
     </a>
   `).join("");
@@ -163,12 +142,12 @@ function openMovieDetail(id) {
         ${tagsHTML}
       </div>
 
-      <p class="detail-summary">Watch and Stream ${item.shortTitle} High Quality Dual Audio Direct Stream & Fast Download</p>
+      <p class="detail-summary">Download ${item.shortTitle} WEB-DL [Hindi (DD5.1) & Telugu] 1080p 720p & 480p Dual Audio [x264/HEVC's] | Full Movie</p>
       
       <img src="${item.poster}" alt="${item.shortTitle}" class="detail-banner">
 
       <div class="download-section">
-        <div class="download-title">: DOWNLOAD & STREAM LINKS :</div>
+        <div class="download-title">: DOWNLOAD LINKS :</div>
         <div class="download-list">
           ${dlHTML}
         </div>
