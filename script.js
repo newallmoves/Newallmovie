@@ -26,7 +26,7 @@ const mediaData = [
     year: "2026",
     releaseDate: "Aug-21st 2026",
     genre: ["Action", "Thriller"],
-    poster: "https://new1.hdhub4u.af/lenin-2026-hindi-org-webrip-full-movie/",
+    poster: "3GER9CDJQMe3eG3CcQer0zvSIyc.jpg",
     quality: "1080p",
     downloads: [
       { quality: "480p HQ Clean", size: "480p⚡[570MB]", link: " https://pub-bb3047cda4324954adc1d55b39aaeccc.r2.dev/1b8a44196c3c40bdcae24f5cf1a26ae5" },
