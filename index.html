@@ -1,69 +1,77 @@
 <!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title> new All movie,s— ALL Movie Portal</title>
-<link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CineVault Pro — Ultra Entertainment Hub</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-<header class="topbar">
-  <div class="logo">Cine<span>Vault</span></div>
-  <nav>
-    <a href="#home">Home</a><a href="#movies">Movies</a><a href="#series">Web Series</a>
-    <a href="#categories">Categories</a>
-  </nav>
-  <button class="menu" onclick="toggleNav()">☰</button>
-</header>
 
-<section class="hero" id="home">
-  <div class="hero-content">
-    <p class="eyebrow">LEGAL MOVIE PORTAL</p>
-    <h1>Watch. download. Discover. Enjoy.</h1>
-    <p>Movies, trailers and series information in one clean, mobile-friendly portal.</p>
-    <div class="search-wrap">
-      <input id="searchInput" type="search" placeholder="Search movies, genres..." oninput="searchMovies()">
-      <button onclick="searchMovies()">Search</button>
+  <!-- Top Announcement Bar -->
+  <aside class="notice-bar">
+    <div class="notice-content">
+      <i class="fa-solid fa-bolt notice-icon"></i>
+      <span><strong>Official Portal:</strong> Always access CineVault directly. Join our <strong>Telegram & WhatsApp</strong> for 4K updates!</span>
     </div>
-  </div>
-</section>
+  </aside>
 
-<main>
-<section class="section" id="movies">
-  <div class="section-head"><h2>Popular Movies</h2><span id="count"></span></div>
-  <div class="grid" id="movieGrid"></div>
-</section>
+  <!-- Sticky Navbar -->
+  <header class="navbar">
+    <div class="nav-left">
+      <button class="nav-btn" onclick="showHomePage()"><i class="fa-solid fa-bars"></i></button>
+      <div class="brand-logo" onclick="showHomePage()">
+        <span class="logo-accent">CINE</span>VAULT<span>.4K</span>
+      </div>
+      <button class="badge-4k-btn"><i class="fa-solid fa-film"></i> 4K ULTRA</button>
+    </div>
+    
+    <div class="nav-search">
+      <input type="text" id="searchInput" placeholder="Search Movies, Anime, Dual Audio..." oninput="searchMedia()">
+      <button onclick="searchMedia()"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+  </header>
 
-<section class="section" id="series">
-  <div class="section-head"><h2>Web Series</h2></div>
-  <div class="grid" id="seriesGrid"></div>
-</section>
+  <!-- HOME VIEW -->
+  <main id="homeView">
+    <!-- Top Horizontal Slider -->
+    <section class="slider-section">
+      <div class="slider-title"><i class="fa-solid fa-fire"></i> Trending Releases</div>
+      <div class="slider-track" id="sliderTrack"></div>
+    </section>
 
-<section class="section" id="categories">
-  <h2>Browse Categories</h2>
-  <div class="categories">
-    <button onclick="filterCategory('All')">All</button>
-    <button onclick="filterCategory('Action')">Action</button>
-    <button onclick="filterCategory('Comedy')">Comedy</button>
-    <button onclick="filterCategory('Drama')">Drama</button>
-    <button onclick="filterCategory('Thriller')">Thriller</button>
-    <button onclick="filterCategory('Animation')">Animation</button>
-  </div>
-</section>
-</main>
+    <!-- Filter Categories -->
+    <section class="filters-bar">
+      <button class="filter-pill active" onclick="filterGenre('All')">All</button>
+      <button class="filter-pill" onclick="filterGenre('Action')">Action</button>
+      <button class="filter-pill" onclick="filterGenre('Thriller')">Thriller</button>
+      <button class="filter-pill" onclick="filterGenre('Sci-Fi')">Sci-Fi</button>
+      <button class="filter-pill" onclick="filterGenre('Drama')">Drama</button>
+      <button class="filter-pill" onclick="filterGenre('Dual Audio')">Dual Audio</button>
+    </section>
 
-<div class="modal" id="modal">
-  <div class="modal-box">
-    <button class="close" onclick="closeModal()">×</button>
-    <div id="modalContent"></div>
-  </div>
-</div>
+    <!-- Main Grid Section -->
+    <section class="catalog-section">
+      <div class="catalog-header">
+        <h2><i class="fa-solid fa-layer-group"></i> Latest Ultra HD Releases</h2>
+        <span class="catalog-count" id="totalCount">0 Titles</span>
+      </div>
+      <div class="movie-grid" id="mainGrid"></div>
+    </section>
+  </main>
 
-<footer>
-  <div class="logo">Cine<span>Vault</span></div>
-  <p>© 2026 New All movie's. Demo template for legal, authorized content.</p>
-  <small>Only use content and streaming/download links that you own, license, or are legally authorized to distribute.</small>
-</footer>
-<script src="script.js"></script>
+  <!-- SINGLE MOVIE DETAIL VIEW -->
+  <main id="detailView" class="hidden">
+    <div class="detail-container" id="detailContent"></div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-logo">CINE<span>VAULT</span></div>
+    <p>© 2026 CineVault Media Hub — Fast, High Quality & Secured Streaming UI.</p>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
