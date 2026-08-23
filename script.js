@@ -22,15 +22,14 @@ const mediaData = [
   },
   {
     id: 2,
-    title: "7 Dogs (2026) HQ-HDTC [Hindi (LINE)] 1080p 720p & 480p [x264/HEVC] | Full Movie",
-    shortTitle: "7 Dogs (2026)",
+    title: "LENiN (2026) DS4K WEB-DL [Hindi (DD5.1) & Telugu] 4K 1080p 720p & 480p Dual Audio [x264/HEVC] | Full Movie(2026)",
     year: "2026",
-    releaseDate: "Jul-14th, 2026",
+    releaseDate: "Aug-21st 2026",
     genre: ["Action", "Thriller"],
-    poster: "https://images.unsplash.com/photo-1509281373149-e957c6296406?w=500&auto=format&fit=crop&q=60",
+    poster: "https://new1.hdhub4u.af/lenin-2026-hindi-org-webrip-full-movie/",
     quality: "1080p",
     downloads: [
-      { quality: "480p HQ Clean", size: "450 MB", link: "#" },
+      { quality: "480p HQ Clean", size: "480p⚡[570MB]", link: " https://pub-bb3047cda4324954adc1d55b39aaeccc.r2.dev/1b8a44196c3c40bdcae24f5cf1a26ae5" },
       { quality: "720p HEVC x265", size: "850 MB", link: "#" },
       { quality: "1080p Full HD", size: "1.8 GB", link: "#" }
     ]
